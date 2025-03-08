@@ -31,14 +31,25 @@
         button {
             width: 100%;
             padding: 10px;
-            background-color: #007bff;
-            color: white;
+            margin-top: 10px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
         }
-        button:hover {
+        .login-btn {
+            background-color: #007bff;
+            color: white;
+        }
+        .login-btn:hover {
             background-color: #0056b3;
+        }
+        .signup-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .signup-btn:hover {
+            background-color: #218838;
         }
     </style>
 </head>
@@ -47,7 +58,8 @@
         <h2>로그인</h2>
         <input type="text" placeholder="아이디 입력" id="username">
         <input type="password" placeholder="비밀번호 입력" id="password">
-        <button onclick="login()">로그인</button>
+        <button class="login-btn" onclick="login()">로그인</button>
+        <button class="signup-btn" onclick="signup()">회원가입</button>
     </div>
 
     <script>
@@ -60,6 +72,10 @@
             } else {
                 alert('아이디와 비밀번호를 입력하세요.');
             }
+        }
+
+        function signup() {
+            alert('회원가입 페이지로 이동합니다.');
         }
     </script>
 </body>
